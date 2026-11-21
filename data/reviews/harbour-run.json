@@ -1,5 +1,5 @@
 {
-  "deadline_day": 99,
+  "deadline_day": null,
   "tasks": [
     {
       "id": "T1",
@@ -22,7 +22,9 @@
       ],
       "quote": "Get the course approved by the council",
       "confidence": null,
-      "flags": []
+      "flags": [
+        "The table lists insurance as a dependency, but the notes say insurance follows course approval, creating a possible circular dependency."
+      ]
     },
     {
       "id": "T3",
@@ -32,7 +34,9 @@
       "depends_on": [],
       "quote": "Take out the event insurance",
       "confidence": null,
-      "flags": []
+      "flags": [
+        "The Insurance notes say this follows council course approval, but the table lists no dependency."
+      ]
     },
     {
       "id": "T4",
@@ -54,9 +58,7 @@
       ],
       "quote": "Order race numbers and timing chips",
       "confidence": null,
-      "flags": [
-        "Narrative states timing chips take 'about ten days' to arrive, suggesting an estimate."
-      ]
+      "flags": []
     },
     {
       "id": "T6",
@@ -143,14 +145,16 @@
   ],
   "findings": [
     {
-      "title": "Timeline inconsistency between run date and task deadline",
-      "detail": "The summary states the run is 30 days after kickoff, but the task list requires everything to be done five weeks (35 days) after kickoff. The notes also instruct to record the deadline as day 99.",
-      "quote": "The run is on a Sunday morning, 30 days after kickoff."
+      "title": "Insurance dependency contradicts course approval dependency",
+      "detail": "The table makes course approval depend on event insurance, but the Insurance notes say insurance is taken out after council course approval. The council also requires the insurance certificate before signing off the course, creating a circular dependency.",
+      "quote": "Kerry will take out the event insurance once the council has approved the course, because the insurers want a copy of the approved course map before they will cover us.",
+      "action": "Clarify whether insurance depends on course approval or has no dependency."
     },
     {
-      "title": "Contradiction between course approval and insurance sequencing",
-      "detail": "The table lists course approval as waiting for event insurance, but the notes state insurance is taken out only after council approval of the course.",
-      "quote": "Kerry will take out the event insurance once the council has approved the course, because the insurers want a copy of the approved course map before they will cover us."
+      "title": "Conflicting deadlines for event date",
+      "detail": "The summary says the run is 30 days after kickoff, the task table says everything must be done five weeks after kickoff, and the notes say to record the deadline as day 99.",
+      "quote": "The run is on a Sunday morning, 30 days after kickoff.",
+      "action": "Confirm whether the deadline is day 30, 35, or 99."
     }
   ]
 }

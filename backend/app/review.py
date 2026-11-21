@@ -21,7 +21,10 @@ Each task must have:
 id, name, owner, duration_days, depends_on, quote
 
 Each finding must have:
-title, detail, quote
+title, detail, quote, action
+
+The action must be a non-empty string of at most 15 words.
+Include action for every finding, even when the plan has missing information.
 
 Use unique task IDs. Dependencies must refer to existing task IDs.
 depends_on must always be a JSON array.
@@ -51,6 +54,12 @@ Use task-level flags only for uncertainty specific to that task.
 If the same uncertainty applies to the whole plan, report it once as a finding instead.
 Do not repeat the same general warning across every task.
 
+For every finding, include an "action" field.
+The action must be one short, specific sentence telling the reviewer what to check, confirm, or correct.
+Start with a verb such as "Confirm", "Check", "Clarify", or "Resolve".
+Keep the action under 15 words.
+Do not repeat the full explanation in the action field.
+
 Return JSON only, with no markdown formatting.
 
 Plan:
@@ -73,6 +82,7 @@ class Finding(BaseModel):
     title: StrictStr
     detail: StrictStr
     quote: StrictStr | None
+    action: StrictStr
 
 
 class ReviewOutput(BaseModel):

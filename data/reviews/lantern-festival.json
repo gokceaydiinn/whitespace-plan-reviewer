@@ -22,7 +22,7 @@
       "quote": "Apply for the road closure",
       "confidence": null,
       "flags": [
-        "Duration is 'about two weeks' and not a precise number of days; converted to 14 days."
+        "Duration is 'about two weeks', an estimate rather than a confirmed fixed duration."
       ]
     },
     {
@@ -47,7 +47,9 @@
       ],
       "quote": "Write the risk assessment",
       "confidence": null,
-      "flags": []
+      "flags": [
+        "Table lists dependency on route agreement only, but notes say it is written after first aid cover is confirmed."
+      ]
     },
     {
       "id": "T5",
@@ -58,7 +60,7 @@
       "quote": "Arrange the event insurance",
       "confidence": null,
       "flags": [
-        "Table lists no dependency ('-'), but notes say insurance is arranged after the risk assessment is finished; dependency is unclear."
+        "Table lists no dependency, but notes say insurance is arranged after the risk assessment is finished."
       ]
     },
     {
@@ -106,7 +108,7 @@
       "quote": "Arrange extra bins and a litter-pick team for the night",
       "confidence": null,
       "flags": [
-        "Owner is listed as 'tbc', so no person is named."
+        "Owner is 'tbc', no person named."
       ]
     },
     {
@@ -215,80 +217,38 @@
       "quote": "Put up the posters and deliver the flyers",
       "confidence": null,
       "flags": []
-    },
-    {
-      "id": "T19",
-      "name": "Arrange stage lighting and PA system hire",
-      "owner": "Ruth",
-      "duration_days": 3,
-      "depends_on": [
-        "T6"
-      ],
-      "quote": "arrange the hire of the stage lighting and a PA system for the green",
-      "confidence": null,
-      "flags": [
-        "Duration is an estimate ('She reckons that is three days'), not confirmed."
-      ]
-    },
-    {
-      "id": "T20",
-      "name": "Collect finished lanterns and store at community centre",
-      "owner": "Priya",
-      "duration_days": 2,
-      "depends_on": [
-        "T15"
-      ],
-      "quote": "collect the finished lanterns from both schools and store them at the community centre",
-      "confidence": null,
-      "flags": []
-    },
-    {
-      "id": "T21",
-      "name": "Build the finale frame",
-      "owner": "Gareth",
-      "duration_days": 8,
-      "depends_on": [
-        "T13"
-      ],
-      "quote": "build the frame for the finale",
-      "confidence": null,
-      "flags": []
-    },
-    {
-      "id": "T22",
-      "name": "Write press release and set up social media posts",
-      "owner": "Tom",
-      "duration_days": 3,
-      "depends_on": [
-        "T16"
-      ],
-      "quote": "write the press release for the Pellerby Echo and set up the posts for our social media page",
-      "confidence": null,
-      "flags": [
-        "Duration is an estimate ('He thinks that is three days'), not confirmed."
-      ]
     }
   ],
   "findings": [
     {
-      "title": "Insurance dependency inconsistency",
-      "detail": "The task table lists 'Arrange the event insurance' with no dependency ('-'), but the notes state the broker would not give a quote until they had seen the finished risk assessment, so Ruth will do the insurance after that.",
-      "quote": "Last year they would not give us a quote until they had seen the finished risk assessment, so Ruth will do the insurance after that."
-    },
-    {
       "title": "Unnamed owner for bins and litter-pick task",
-      "detail": "The task 'Arrange extra bins and a litter-pick team for the night' lists the owner as 'tbc', so no person is named.",
-      "quote": "tbc"
+      "detail": "Task 'Arrange extra bins and a litter-pick team for the night' lists owner as 'tbc'; no person is named.",
+      "quote": "tbc",
+      "action": "Confirm the owner for the bins and litter-pick task."
     },
     {
-      "title": "Additional tasks only in notes",
-      "detail": "The notes describe tasks not present in the main task table: arranging stage lighting and PA hire, collecting and storing lanterns, building the finale frame, and writing the press release/social media posts. The table introduction says it lists everything that needs doing.",
-      "quote": "This is everything we know needs doing, with who is doing it and roughly how long it takes."
+      "title": "Risk assessment dependency unclear",
+      "detail": "Table lists risk assessment as depending only on route agreement, but notes say it is written after first aid cover is confirmed.",
+      "quote": "Ruth will write the risk assessment once Gareth has confirmed the first aid cover",
+      "action": "Clarify whether risk assessment depends on first aid cover."
     },
     {
-      "title": "Vague duration for road closure application",
-      "detail": "The duration for 'Apply for the road closure' is given as 'about two weeks', which is not a precise number of days.",
-      "quote": "about two weeks"
+      "title": "Event insurance dependency unclear",
+      "detail": "Table lists insurance with no dependency, but notes say it is arranged after the risk assessment is finished.",
+      "quote": "Last year they would not give us a quote until they had seen the finished risk assessment, so Ruth will do the insurance after that.",
+      "action": "Confirm if insurance depends on the completed risk assessment."
+    },
+    {
+      "title": "Additional tasks not in task list",
+      "detail": "The notes mention tasks not in the table: arranging stage lighting and PA hire, building the finale frame, collecting and storing lanterns, and writing press release and social media posts.",
+      "quote": "Once both bands are booked and have sent over what they need, Ruth will also arrange the hire of the stage lighting and a PA system for the green.",
+      "action": "Check if notes tasks should be added to the task list."
+    },
+    {
+      "title": "Approximate duration for road closure",
+      "detail": "Task 'Apply for the road closure' duration is stated as 'about two weeks', which is an estimate rather than a confirmed fixed duration.",
+      "quote": "about two weeks",
+      "action": "Confirm the exact duration for the road closure application."
     }
   ]
 }

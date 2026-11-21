@@ -4,7 +4,7 @@
     {
       "id": "T1",
       "name": "Book the main hall and the side room",
-      "owner": "Joan",
+      "owner": "Joan Whitlock",
       "duration_days": 2,
       "depends_on": [],
       "quote": "Book the main hall and the side room",
@@ -14,7 +14,7 @@
     {
       "id": "T2",
       "name": "Invite stallholders and confirm their pitches",
-      "owner": "Martin",
+      "owner": "Martin Ashby",
       "duration_days": 10,
       "depends_on": [
         "T1"
@@ -26,7 +26,7 @@
     {
       "id": "T3",
       "name": "Organise the tea and cake stall",
-      "owner": "Joan",
+      "owner": "Joan Whitlock",
       "duration_days": 4,
       "depends_on": [
         "T1"
@@ -38,7 +38,7 @@
     {
       "id": "T4",
       "name": "Design the poster and flyer",
-      "owner": "Leila",
+      "owner": "Leila Haddad",
       "duration_days": 3,
       "depends_on": [
         "T1"
@@ -50,7 +50,7 @@
     {
       "id": "T5",
       "name": "Print the posters and put them up around town",
-      "owner": "Leila",
+      "owner": "Leila Haddad",
       "duration_days": 7,
       "depends_on": [
         "T4"
@@ -62,7 +62,7 @@
     {
       "id": "T6",
       "name": "Draw up the floor plan for both rooms",
-      "owner": "Joan",
+      "owner": "Joan Whitlock",
       "duration_days": 3,
       "depends_on": [
         "T2"
@@ -74,7 +74,7 @@
     {
       "id": "T7",
       "name": "Hire the extra tables and chairs",
-      "owner": "Martin",
+      "owner": "Martin Ashby",
       "duration_days": 2,
       "depends_on": [
         "T6"
@@ -86,7 +86,7 @@
     {
       "id": "T8",
       "name": "Set up the volunteer rota for the day",
-      "owner": "Leila",
+      "owner": "Leila Haddad",
       "duration_days": 3,
       "depends_on": [
         "T6"
@@ -98,14 +98,16 @@
   ],
   "findings": [
     {
-      "title": "Kickoff date not specified",
-      "detail": "The plan states the market is 21 days after the kickoff meeting and all tasks must be finished by then, but the date of the kickoff meeting is not provided, so the absolute calendar deadline cannot be determined.",
-      "quote": "The market is on a Saturday, 21 days after our kickoff meeting, and everything in the task list below needs to be finished by then."
+      "title": "Durations are estimates",
+      "detail": "The plan states that task durations are a best guess rather than confirmed times.",
+      "quote": "Durations are our best guess at how long each job takes from when it can start.",
+      "action": "Confirm task durations with task owners"
     },
     {
-      "title": "Task durations are estimates",
-      "detail": "Durations are described in the plan as best guesses rather than confirmed fixed durations.",
-      "quote": "Durations are our best guess at how long each job takes from when it can start."
+      "title": "External go-ahead dependency",
+      "detail": "The notes say hall booking depends on receiving the go-ahead, but the task list shows no dependency for booking the hall.",
+      "quote": "Joan will book the main hall and the side room through the Town Hall office as soon as we have the go-ahead.",
+      "action": "Confirm if go-ahead is required before hall booking"
     }
   ]
 }
