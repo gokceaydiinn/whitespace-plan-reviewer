@@ -115,8 +115,8 @@ def schedule(tasks, deadline_day):
         "schedule": items,
         "end_day": end_day,
         "deadline_day": deadline_day,
-        "meets_deadline": end_day <= deadline_day,
-        "days_late": max(0, end_day - deadline_day),
+        "meets_deadline": end_day <= deadline_day if deadline_day is not None else None,
+        "days_late": max(0, end_day - deadline_day) if deadline_day is not None else None,
         "cycle": [],
         "optimization_status": solver.StatusName(result),
     }
