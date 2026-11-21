@@ -1,5 +1,6 @@
 import json
 from pathlib import Path
+from pydantic import BaseModel, Field, StrictInt, StrictStr, model_validator
 
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
@@ -11,6 +12,34 @@ DATA = ROOT / "data"
 DIST = ROOT / "frontend" / "dist"
 
 app = FastAPI()
+
+class Task(BaseModel):
+    id: StrictStr
+    name: StrictStr
+    owner: StrictStr | None
+    duration_days: StrictInt = Field(ge=1)
+    depends_on: list[StrictStr]
+
+
+class ScheduleRequest(BaseModel):
+    tasks: list[Task] = Field(max_length=60)
+    deadline_day: StrictInt
+
+    @model_validator(mode="after")
+    def check_tasks(self):
+        ids = [t.id for t in self.tasks]
+
+        if len(ids) != len(set(ids)):
+            raise ValueError("Task IDs must be unique")
+
+        for task in self.tasks:
+            for dep in task.depends_on:
+                if dep not in ids:
+                    raise ValueError(
+                        f"Task {task.id} depends on unknown task {dep}"
+                    )
+
+        return self
 
 
 @app.get("/api/plans")
@@ -35,8 +64,11 @@ def get_plan(plan_id: str):
 
 
 @app.post("/api/schedule")
-def post_schedule(body: dict):
-    return schedule(body["tasks"], body["deadline_day"])
+def post_schedule(body: ScheduleRequest):
+    return schedule(
+        [task.model_dump() for task in body.tasks],
+        body.deadline_day
+    )
 
 
 if DIST.exists():
