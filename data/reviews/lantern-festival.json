@@ -7,17 +7,23 @@
       "owner": "Ruth",
       "duration_days": 5,
       "depends_on": [],
-      "quote": "Agree the route and the site plan with the council"
+      "quote": "Agree the route and the site plan with the council",
+      "confidence": null,
+      "flags": []
     },
     {
       "id": "T2",
       "name": "Apply for the road closure",
       "owner": "Ruth",
-      "duration_days": 10,
+      "duration_days": 14,
       "depends_on": [
         "T1"
       ],
-      "quote": "Apply for the road closure"
+      "quote": "Apply for the road closure",
+      "confidence": null,
+      "flags": [
+        "Duration is 'about two weeks' and not a precise number of days; converted to 14 days."
+      ]
     },
     {
       "id": "T3",
@@ -27,7 +33,9 @@
       "depends_on": [
         "T1"
       ],
-      "quote": "Arrange first aid cover"
+      "quote": "Arrange first aid cover",
+      "confidence": null,
+      "flags": []
     },
     {
       "id": "T4",
@@ -35,10 +43,11 @@
       "owner": "Ruth",
       "duration_days": 5,
       "depends_on": [
-        "T1",
-        "T3"
+        "T1"
       ],
-      "quote": "Write the risk assessment"
+      "quote": "Write the risk assessment",
+      "confidence": null,
+      "flags": []
     },
     {
       "id": "T5",
@@ -46,7 +55,11 @@
       "owner": "Ruth",
       "duration_days": 3,
       "depends_on": [],
-      "quote": "Arrange the event insurance"
+      "quote": "Arrange the event insurance",
+      "confidence": null,
+      "flags": [
+        "Table lists no dependency ('-'), but notes say insurance is arranged after the risk assessment is finished; dependency is unclear."
+      ]
     },
     {
       "id": "T6",
@@ -54,7 +67,9 @@
       "owner": "Ruth",
       "duration_days": 5,
       "depends_on": [],
-      "quote": "Book the Silver Band and the samba band"
+      "quote": "Book the Silver Band and the samba band",
+      "confidence": null,
+      "flags": []
     },
     {
       "id": "T7",
@@ -64,7 +79,9 @@
       "depends_on": [
         "T1"
       ],
-      "quote": "Book the food stalls"
+      "quote": "Book the food stalls",
+      "confidence": null,
+      "flags": []
     },
     {
       "id": "T8",
@@ -74,7 +91,9 @@
       "depends_on": [
         "T1"
       ],
-      "quote": "Hire the toilets and the crowd barriers"
+      "quote": "Hire the toilets and the crowd barriers",
+      "confidence": null,
+      "flags": []
     },
     {
       "id": "T9",
@@ -84,7 +103,11 @@
       "depends_on": [
         "T1"
       ],
-      "quote": "Arrange extra bins and a litter-pick team for the night"
+      "quote": "Arrange extra bins and a litter-pick team for the night",
+      "confidence": null,
+      "flags": [
+        "Owner is listed as 'tbc', so no person is named."
+      ]
     },
     {
       "id": "T10",
@@ -94,7 +117,9 @@
       "depends_on": [
         "T1"
       ],
-      "quote": "Recruit stewards"
+      "quote": "Recruit stewards",
+      "confidence": null,
+      "flags": []
     },
     {
       "id": "T11",
@@ -105,7 +130,9 @@
         "T10",
         "T4"
       ],
-      "quote": "Brief the stewards"
+      "quote": "Brief the stewards",
+      "confidence": null,
+      "flags": []
     },
     {
       "id": "T12",
@@ -115,7 +142,9 @@
       "depends_on": [
         "T10"
       ],
-      "quote": "Draw up the volunteer rota"
+      "quote": "Draw up the volunteer rota",
+      "confidence": null,
+      "flags": []
     },
     {
       "id": "T13",
@@ -123,7 +152,9 @@
       "owner": "Hannah",
       "duration_days": 14,
       "depends_on": [],
-      "quote": "Raise sponsorship from local businesses"
+      "quote": "Raise sponsorship from local businesses",
+      "confidence": null,
+      "flags": []
     },
     {
       "id": "T14",
@@ -133,7 +164,9 @@
       "depends_on": [
         "T13"
       ],
-      "quote": "Order the lantern-making materials"
+      "quote": "Order the lantern-making materials",
+      "confidence": null,
+      "flags": []
     },
     {
       "id": "T15",
@@ -143,7 +176,9 @@
       "depends_on": [
         "T14"
       ],
-      "quote": "Run lantern-making workshops in both of the schools"
+      "quote": "Run the lantern-making workshops in both schools",
+      "confidence": null,
+      "flags": []
     },
     {
       "id": "T16",
@@ -153,7 +188,9 @@
       "depends_on": [
         "T6"
       ],
-      "quote": "Design the poster and flyer"
+      "quote": "Design the poster and flyer",
+      "confidence": null,
+      "flags": []
     },
     {
       "id": "T17",
@@ -161,10 +198,11 @@
       "owner": "Tom",
       "duration_days": 4,
       "depends_on": [
-        "T16",
-        "T2"
+        "T16"
       ],
-      "quote": "Print the posters and flyers"
+      "quote": "Print the posters and flyers",
+      "confidence": null,
+      "flags": []
     },
     {
       "id": "T18",
@@ -174,27 +212,35 @@
       "depends_on": [
         "T17"
       ],
-      "quote": "Put up the posters and deliver the flyers"
+      "quote": "Put up the posters and deliver the flyers",
+      "confidence": null,
+      "flags": []
     },
     {
       "id": "T19",
-      "name": "Hire the stage lighting and PA",
+      "name": "Arrange stage lighting and PA system hire",
       "owner": "Ruth",
       "duration_days": 3,
       "depends_on": [
         "T6"
       ],
-      "quote": "Once both bands are booked and have sent over what they need, Ruth will also arrange the hire of the stage lighting and a PA system for the green."
+      "quote": "arrange the hire of the stage lighting and a PA system for the green",
+      "confidence": null,
+      "flags": [
+        "Duration is an estimate ('She reckons that is three days'), not confirmed."
+      ]
     },
     {
       "id": "T20",
-      "name": "Collect and store the finished lanterns",
+      "name": "Collect finished lanterns and store at community centre",
       "owner": "Priya",
       "duration_days": 2,
       "depends_on": [
         "T15"
       ],
-      "quote": "When the workshops finish, Priya will collect the finished lanterns from both schools and store them at the community centre until the evening, which takes her two days."
+      "quote": "collect the finished lanterns from both schools and store them at the community centre",
+      "confidence": null,
+      "flags": []
     },
     {
       "id": "T21",
@@ -204,24 +250,45 @@
       "depends_on": [
         "T13"
       ],
-      "quote": "Gareth will build the frame for the finale in his garage, so it only needs putting up on the green on the evening."
+      "quote": "build the frame for the finale",
+      "confidence": null,
+      "flags": []
     },
     {
       "id": "T22",
-      "name": "Write the press release and social media posts",
+      "name": "Write press release and set up social media posts",
       "owner": "Tom",
       "duration_days": 3,
       "depends_on": [
         "T16"
       ],
-      "quote": "Once the poster design is done, Tom will also write the press release for the Pellerby Echo and set up the posts for our social media page, so that everything uses the same artwork."
+      "quote": "write the press release for the Pellerby Echo and set up the posts for our social media page",
+      "confidence": null,
+      "flags": [
+        "Duration is an estimate ('He thinks that is three days'), not confirmed."
+      ]
     }
   ],
   "findings": [
     {
-      "title": "One task has no owner",
-      "detail": "The task to arrange extra bins and a litter-pick team for the night is marked tbc, so nobody is responsible for it and it may not get done.",
-      "quote": "Arrange extra bins and a litter-pick team for the night"
+      "title": "Insurance dependency inconsistency",
+      "detail": "The task table lists 'Arrange the event insurance' with no dependency ('-'), but the notes state the broker would not give a quote until they had seen the finished risk assessment, so Ruth will do the insurance after that.",
+      "quote": "Last year they would not give us a quote until they had seen the finished risk assessment, so Ruth will do the insurance after that."
+    },
+    {
+      "title": "Unnamed owner for bins and litter-pick task",
+      "detail": "The task 'Arrange extra bins and a litter-pick team for the night' lists the owner as 'tbc', so no person is named.",
+      "quote": "tbc"
+    },
+    {
+      "title": "Additional tasks only in notes",
+      "detail": "The notes describe tasks not present in the main task table: arranging stage lighting and PA hire, collecting and storing lanterns, building the finale frame, and writing the press release/social media posts. The table introduction says it lists everything that needs doing.",
+      "quote": "This is everything we know needs doing, with who is doing it and roughly how long it takes."
+    },
+    {
+      "title": "Vague duration for road closure application",
+      "detail": "The duration for 'Apply for the road closure' is given as 'about two weeks', which is not a precise number of days.",
+      "quote": "about two weeks"
     }
   ]
 }

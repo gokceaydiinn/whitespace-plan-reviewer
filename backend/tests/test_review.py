@@ -78,3 +78,27 @@ def test_unknown_review_dependency():
 
     with pytest.raises(ValueError, match="Unknown dependency"):
         ReviewOutput.model_validate(review)
+
+
+def test_uncertainty_flags():
+    review = {
+        "deadline_day": 10,
+        "tasks": [{
+            "id": "T1",
+            "name": "Arrange catering",
+            "owner": "Ann",
+            "duration_days": 3,
+            "depends_on": [],
+            "quote": "Catering will take a few days.",
+            "confidence": None,
+            "flags": ["Duration is not clearly specified"]
+        }],
+        "findings": []
+    }
+
+    validated = ReviewOutput.model_validate(review)
+
+    assert validated.tasks[0].confidence is None
+    assert validated.tasks[0].flags == [
+        "Duration is not clearly specified"
+    ]

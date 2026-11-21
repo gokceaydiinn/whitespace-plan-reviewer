@@ -4,3 +4,4 @@ anthropic
 pytest
 httpx
 ortools==9.15.6755
+openai==3.57.0

@@ -7,7 +7,9 @@
       "owner": "Joan",
       "duration_days": 2,
       "depends_on": [],
-      "quote": "Book the main hall and the side room"
+      "quote": "Book the main hall and the side room",
+      "confidence": null,
+      "flags": []
     },
     {
       "id": "T2",
@@ -17,7 +19,9 @@
       "depends_on": [
         "T1"
       ],
-      "quote": "Invite stallholders and confirm their pitches"
+      "quote": "Invite stallholders and confirm their pitches",
+      "confidence": null,
+      "flags": []
     },
     {
       "id": "T3",
@@ -27,7 +31,9 @@
       "depends_on": [
         "T1"
       ],
-      "quote": "Organise the tea and cake stall"
+      "quote": "Organise the tea and cake stall",
+      "confidence": null,
+      "flags": []
     },
     {
       "id": "T4",
@@ -37,7 +43,9 @@
       "depends_on": [
         "T1"
       ],
-      "quote": "Design the poster and flyer"
+      "quote": "Design the poster and flyer",
+      "confidence": null,
+      "flags": []
     },
     {
       "id": "T5",
@@ -47,7 +55,9 @@
       "depends_on": [
         "T4"
       ],
-      "quote": "Print the posters and put them up around town"
+      "quote": "Print the posters and put them up around town",
+      "confidence": null,
+      "flags": []
     },
     {
       "id": "T6",
@@ -57,7 +67,9 @@
       "depends_on": [
         "T2"
       ],
-      "quote": "Draw up the floor plan for both rooms"
+      "quote": "Draw up the floor plan for both rooms",
+      "confidence": null,
+      "flags": []
     },
     {
       "id": "T7",
@@ -67,7 +79,9 @@
       "depends_on": [
         "T6"
       ],
-      "quote": "Hire the extra tables and chairs"
+      "quote": "Hire the extra tables and chairs",
+      "confidence": null,
+      "flags": []
     },
     {
       "id": "T8",
@@ -77,8 +91,21 @@
       "depends_on": [
         "T6"
       ],
-      "quote": "Set up the volunteer rota for the day"
+      "quote": "Set up the volunteer rota for the day",
+      "confidence": null,
+      "flags": []
     }
   ],
-  "findings": []
+  "findings": [
+    {
+      "title": "Kickoff date not specified",
+      "detail": "The plan states the market is 21 days after the kickoff meeting and all tasks must be finished by then, but the date of the kickoff meeting is not provided, so the absolute calendar deadline cannot be determined.",
+      "quote": "The market is on a Saturday, 21 days after our kickoff meeting, and everything in the task list below needs to be finished by then."
+    },
+    {
+      "title": "Task durations are estimates",
+      "detail": "Durations are described in the plan as best guesses rather than confirmed fixed durations.",
+      "quote": "Durations are our best guess at how long each job takes from when it can start."
+    }
+  ]
 }
